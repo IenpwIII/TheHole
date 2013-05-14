@@ -1,0 +1,3 @@
+v 0.0.0 - Rising Skeleton (14/05/13)
+    * Project created!
+    * Wrote script that allows user to either read a given room from the database or to create a brand new room
