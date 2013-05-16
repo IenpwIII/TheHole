@@ -5,14 +5,15 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <div class='version'>v. 0.0.0 &ndash; 'Rising Skeleton'</div>
-
     <div class='content'>
         <?PHP
             $user='hole';
             $pass='1';
             $data='hole';
             $serv='localhost';
+    
+            require_once "printversion.php";
+            print "<a href ='index.php'>Go back</a>";
 
             $db_handle = mysql_connect($serv,$user,$pass);
             $db_found = mysql_select_db($data,$db_handle);

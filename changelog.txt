@@ -1,3 +1,8 @@
-v 0.0.0 - Rising Skeleton (14/05/13)
+v 0.0.0 - Skeleton Missing (15/05/13)
+    * Added map functionality: rooms now have an x,y,z location!
+    * Accessing non-existent rooms creates them with placeholder details!
+    * Restructured code, using functions and includes and everything
+
+v 0.0.0 - Skeleton Rising (14/05/13)
     * Project created!
     * Wrote script that allows user to either read a given room from the database or to create a brand new room
