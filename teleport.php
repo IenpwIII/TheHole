@@ -1,5 +1,5 @@
 <?PHP
-    print "<form action='index.php' method='post' autocomplete='off'>";
+    print "<form action='room.php' method='post' autocomplete='off'>";
     print "    x: <input type='text' name='xloc' /> ";
     print "    y: <input type='text' name='yloc' /> ";
     print "    z: <input type='text' name='zloc' />";

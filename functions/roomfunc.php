@@ -1,6 +1,14 @@
 <?PHP
     function createRoom($name,$x_pos,$y_pos,$z_pos,$x_size,$y_size,$description) {
-        $query= "INSERT INTO rooms( name, xloc, yloc, zloc,description ) VALUES ('$name',$x_pos,$y_pos,$z_pos,'$description')";
+        $name = mysql_real_escape_string($name);
+        $x_pos = mysql_real_escape_string($x_pos);
+        $y_pos = mysql_real_escape_string($y_pos);
+        $z_pos = mysql_real_escape_string($z_pos);
+        $x_size = mysql_real_escape_string($x_size);
+        $y_size = mysql_real_escape_string($y_size);
+        $description = mysql_real_escape_string($description);
+
+        $query= "INSERT INTO rooms( name, xloc, yloc, zloc, xsize, ysize, description ) VALUES ('$name',$x_pos,$y_pos,$z_pos,$x_size,$y_size,'$description')";
         $result=mysql_query($query);
     }
 
@@ -17,6 +25,10 @@
     }
 
     function enterRoom($x_pos,$y_pos,$z_pos) {
+        $x_pos = mysql_real_escape_string($x_pos);
+        $y_pos = mysql_real_escape_string($y_pos);
+        $z_pos = mysql_real_escape_string($z_pos);
+
         $query="SELECT * FROM `rooms` WHERE xloc=$x_pos AND yloc=$y_pos AND zloc=$z_pos";
         $result=mysql_query($query);
         $check = $result;
@@ -30,6 +42,10 @@
     }
 
     function findRoom($x_pos,$y_pos,$z_pos) {
+        $x_pos = mysql_real_escape_string($x_pos);
+        $y_pos = mysql_real_escape_string($y_pos);
+        $z_pos = mysql_real_escape_string($z_pos);
+        
         $query="SELECT * FROM `rooms` WHERE xloc=$x_pos AND yloc=$y_pos AND zloc=$z_pos";
         $result=mysql_query($query);
         return $result;

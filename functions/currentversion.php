@@ -1,4 +1,4 @@
 <?PHP
-    $vnum = "0.0.2";
-    $vname = "Skeleton Exploring";
+    $vnum = "0.0.3";
+    $vname = "Skeleton Swarming";
 ?>

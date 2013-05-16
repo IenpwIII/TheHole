@@ -1,3 +1,6 @@
+v 0.0.3 - Skeleton Swarming (16/05/13)
+    * Created user login system
+
 v 0.0.2 - Skeleton Exploring (16/05/13)
     * Restricted movement to adjacent rooms ( no more teleporting :'c )
 
