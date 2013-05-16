@@ -1,15 +1,5 @@
 <!DOCTYPE>
 
-<?php
-if (isset($_COOKIE["user"])) {
-    echo "Welcome " . $_COOKIE["user"] . "!<br>";
-} else {
-    $expire=time()+60*60*24*30;
-    setcookie("user", "developer", $expire);
-    // session_start();
-}
-?>
-
 <html>
 <head>
     <title>The Hole</title>
@@ -17,23 +7,33 @@ if (isset($_COOKIE["user"])) {
 </head>
 <body>
     <?PHP
-        require_once "printversion.php";
+        require_once "config.php";
+        require_once "$home_folder/functions/printversion.php";
     ?>
     <div class='content'>
-        <p><a href="readallrooms.php">Read all rooms!</a>
-        <p>
-            <form action='index.php' method='post' autocomplete='off'>
-                x: <input type='text' name='xloc' /> 
-                y: <input type='text' name='yloc' /> 
-                z: <input type='text' name='zloc' />
-                <input type='submit' name='submit'/> <br />
-            </form>
-        </p>
+        <?PHP
+            require_once "$home_folder/room.php";
+        ?>
     </div>
     <div class='content'>
-        <?PHP
-            require_once "room.php";
-        ?>
+        <p>
+            <?php
+                print "<a href='$home_folder/readallrooms.php'>Read all rooms!</a>";
+            ?>
+        </p>
+        <p>
+            <form action='index.php' method='post' autocomplete='off'>
+                <?PHP
+                    print "<input type='hidden' name='xloc' value='$x_loc' />";
+                    print "<input type='hidden' name='yloc' value='$y_loc' />";
+                    print "<input type='hidden' name='zloc' value='$z_loc' />";
+                ?>
+                <input type='submit' name='direction' value='North' /> 
+                <input type='submit' name='direction' value='South' /> 
+                <input type='submit' name='direction' value='East' />
+                <input type='submit' name='direction' value='West' />
+            </form>
+        </p>
     </div>
 </body>
 </html>

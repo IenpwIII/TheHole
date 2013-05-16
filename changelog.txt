@@ -1,4 +1,7 @@
-v 0.0.0 - Skeleton Missing (15/05/13)
+v 0.0.2 - Skeleton Exploring (16/05/13)
+    * Restricted movement to adjacent rooms ( no more teleporting :'c )
+
+v 0.0.1 - Skeleton Missing (15/05/13)
     * Added map functionality: rooms now have an x,y,z location!
     * Accessing non-existent rooms creates them with placeholder details!
     * Restructured code, using functions and includes and everything

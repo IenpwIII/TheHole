@@ -1,9 +1,7 @@
 <?PHP
     function createRoom($name,$x_pos,$y_pos,$z_pos,$x_size,$y_size,$description) {
         $query= "INSERT INTO rooms( name, xloc, yloc, zloc,description ) VALUES ('$name',$x_pos,$y_pos,$z_pos,'$description')";
-        print $query;
         $result=mysql_query($query);
-        var_dump(mysql_real_escape_string($result));
     }
 
     function genRoom($x_pos,$y_pos,$z_pos) {
@@ -15,7 +13,6 @@
         $name = "Storage closet #$rum";
         $description = "An empty storage closet";
         createRoom($name,$x_pos,$y_pos,$z_pos,$x_size,$y_size,$description);
-        print "$name,$x_pos,$y_pos,$z_pos,$x_size,$y_size,$description";
         printRoom($x_pos,$y_pos,$z_pos);
     }
 

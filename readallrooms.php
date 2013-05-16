@@ -7,12 +7,7 @@
 <body>
     <div class='content'>
         <?PHP
-            $user='hole';
-            $pass='1';
-            $data='hole';
-            $serv='localhost';
-    
-            require_once "printversion.php";
+            require_once "./config.php";
             print "<a href ='index.php'>Go back</a>";
 
             $db_handle = mysql_connect($serv,$user,$pass);
