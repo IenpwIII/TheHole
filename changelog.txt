@@ -1,3 +1,6 @@
+v 0.0.4 - Skeleton Decorator
+    * Added restrictions for registration (including unique username/email)
+
 v 0.0.3 - Skeleton Swarming (16/05/13)
     * Created user login system
 

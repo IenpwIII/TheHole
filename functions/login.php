@@ -1,34 +1,47 @@
 <?php
     session_start();
-    ob_start("loginbuffer");
-    print "<html>";
-    print "<head>";
-    print "    <title>The Hole</title>";
-    print "    <link rel='stylesheet' type='text/css' href='style.css'>";
-    print "</head>";
-    print "<body>";
 
     require_once "../config.php";
     require_once "connfunc.php";
-    
-    if (connectDB()){
-        $username=mysql_real_escape_string($_POST['username']);
-        $password=mysql_real_escape_string($_POST['password']);
-         
-        $query="SELECT userid FROM users WHERE username='$username' and password=SHA1('$password')";
-        $result=mysql_query($query);
-        $count=mysql_num_rows($result);
-        $userid=mysql_result($result, 0);
 
+    // gets username and password and logs in
+
+    $connection = connectDB();
+
+    if ($connection){
+        $username=mysqli_real_escape_string($connection, $_POST['username']);
+        $password=mysqli_real_escape_string($connection, $_POST['password']);
+
+
+        // gets the number of users that exist with that username and password 
+        $query="SELECT userid FROM users WHERE username='$username' and password=SHA1('$password')";
+        $result=mysqli_query($connection, $query);
+        $count=mysqli_num_rows($result);
+
+        // should be exactly one. If so, send to character select
         if($count==1){
-          $_SESSION['userid']=intval($userid);
-          $_SESSION['username']=$username;
-          header('Location: ../teleport.php');
+            $userid=mysqli_fetch_assoc($result, 0);
+            $_SESSION['userid']=intval($userid);
+            $_SESSION['username']=$username;
+            header('Location: ../charsel.php');
+        // if not, tell them what's up.
         } else {
-          echo "Wrong Username or Password";
+            print "<html>";
+            print "<head>";
+            print "    <title>The Hole</title>";
+            print "    <link rel='stylesheet' type='text/css' href='style.css'>";
+            print "</head>";
+            print "<body>";
+            print "Wrong Username or Password. <a href='../index.php'>Go back.</a>";
         }
         disconnectDB();
     } else {
+        print "<html>";
+        print "<head>";
+        print "    <title>The Hole</title>";
+        print "    <link rel='stylesheet' type='text/css' href='style.css'>";
+        print "</head>";
+        print "<body>";
         print "Error! Could not connect to database!";
     }
     print "</body>";

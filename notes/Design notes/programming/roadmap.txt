@@ -1,0 +1,64 @@
+v 0.0 - Skeleton
+    X v 0.0.0 - Rising
+        X Create database
+        X Add rooms table to hole with columns roomid,name,description
+        X Create test rooms
+        X Read from test rooms
+        X Write script to read from user-submitted room
+        X Write script to write to user-submitted room
+
+    X v 0.0.1 - Missing
+        X Create map
+        X Read from given location on map
+        X Write to given location on map
+        X Generate location on map if it does not exist
+
+    X v 0.0.2 - Exploring
+        X Restrict player to moving to adjacent rooms
+
+    X v 0.0.3 - Swarming
+        X Allow different users
+        X Implement login form
+
+    v 0.0.4 - Sapience
+        X Implement error checking for user forms
+        X    * restrict length of password to between 4 and 16
+        X    * require email
+        X    * restrict length of username
+        X    * allow only one user per username (add notification)
+        Implement (very basic) character creation
+        X    * Save character data to database
+        X    * Link users to characters
+            X * Implement journals~~~
+            X    * Add journal form
+                * Debug journal functionality (nake entries link to room/char)
+                * Display journals on room entry
+            * Add random character placement
+            * Save and load character locations
+            * Disallow characters with the same name
+
+    v 0.0.5 - Decoration
+        Add proper room generation
+        Implement edit lock
+
+    v 0.0.6 - Greed
+        Add items
+        Add character inventories and allow character to pick up items
+        Add monsters
+        Allow players to kill monsters
+
+    v 0.0.7 - Dead
+        Allow character to die
+        Implement hunger mechanic
+
+    v 0.0.8 - Navigating
+        Implement variably sized rooms and EXITS
+
+    v 0.0.9 - Ghost
+        Implement better character creation
+        Allow viewing of character archives
+
+v 0.1 - Vampire
+    v 0.1.0 - Beautiful
+        Massive UI overhaul
+        Make everything consistent

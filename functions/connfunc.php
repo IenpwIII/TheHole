@@ -1,17 +1,18 @@
 <?PHP 
+    // connects to a database
     function connectDB() {
         global $serv,$user,$pass,$data;
         
-        $db_handle = mysql_connect($serv,$user,$pass);
-        $db_found = mysql_select_db($data,$db_handle);
+        $connection = mysqli_connect($serv, $user, $pass, $data);
 
-        return $db_found;
+        return $connection;
     }
     
 
+    // closes an existing connection
     function disconnectDB() {
         global $serv,$user,$pass,$data;
 
-        mysql_close(mysql_connect($serv,$user,$pass));
+        mysqli_close(mysqli_connect($serv, $user, $pass, $data));
     }
 ?>

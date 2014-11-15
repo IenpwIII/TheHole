@@ -1,0 +1,45 @@
+Story/RP heavy
+Victorian (not steampunk)
+Survival
+"Dungeon" escape
+Free form, community designed MMO
+Light on chance, die rolls
+
+Community based
+Selective user base
+
+Character creation
+    On start, each player allocated space
+    On character creation, give option of creating backstory, etc.
+    Given character information, can create backstory from that
+    Players encouraged to die lots
+    
+
+Rooms randomly generated on first entry
+    Multi-level dungeon
+    Rooms can contain:
+        items
+            Players can create items subject to moderator review
+        monsters
+        stairs
+        escape
+            Very low chance of room containing escape (majority of characters will die without escaping)
+        easter eggs, information, mods to environment, random flavor (statues, blood stains, scratches in walls, etc.)
+        non-monster encounters (traps, obstacles, etc., puzzles)
+Logs
+    Player enters room and logs what happens - player determines what goes on log
+    If player enters room generated for other player, receives log of room history
+    Computer can randomly add events to room history
+    Room histories are persistent
+Players encouraged to play realistically
+    Sign ups and other incentives to encourage good, realistic RP
+    Game will sometimes predetermine outcome of events, and ask players to supply details
+Players given persistent inventories
+    All items assigned by game, not players
+Game lore
+    (semi)randomly (?) generated bits of game lore in dungeon rooms
+    Grand overarching lore, game backstory, etc.
+    Players might feel inclined to reference such in journal entries
+
+Lore
+    Asylum (?)

@@ -10,3 +10,7 @@ div.room {
 div.version {
     font-family: monospace;
 }
+
+div.desc {
+    font-style: italic;
+}

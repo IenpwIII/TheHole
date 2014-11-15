@@ -1,0 +1,47 @@
+Home page
+    If logged out
+        Contains information about game and login form
+        Links to registration page
+            Requests name, password, and email
+    If logged in
+        If logged in user does not have a current character
+            Character creation screen
+                Asks for character name, gives some prompts for backstory, allows players to write backstory
+                After character is created, places character in unexplored area of map
+                    Randomly generated room  
+        If logged in user has a current character
+            Shows option screen
+                Continue
+                    Continues current game
+                        Left side of screen
+                            Contains player information
+                                Name
+                                Current inventory
+                            Contains list of journal entries for that CHARACTER
+                        Centre of screen
+                            Journal entry writing panel
+                                If player was first to enter room, locks for editing.
+                                Player can then write journal entry.
+                                Player can save journal entry and leave by clicking on an exit button.
+                                    Prompts to make sure player is done, saves entry to both ROOM and CHARACTER, and brings character to next room (also unlocks room for editing, obviously)
+                                        If room exists
+                                            Loads room information
+                                        If room does not exist
+                                            Randomly creates new room
+                            Room exit buttons
+                            Character killed button
+                                If player determines character is killed, pressing this saves the journal entry (after a prompt) and ends the game
+                                    Character is archived
+                                    All journal entries made to rooms PERSIST
+                        Right side of screen
+                            Contains room information
+                                Description of room and journal entries for that ROOM
+                            Contains descriptions of monsters and items in room
+                                Monsters
+                                    Players can click button to update monster information
+                                        Can kill the monster
+                                        Can edit monster description
+                                Items
+                                    Players can take items by clicking button
+                Show previous characters
+                    Players can browse their previous characters' journals
